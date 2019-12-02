@@ -13,14 +13,16 @@
     
     <!-- Root Context: defines shared resources visible to all other web components -->
     
+    <!-- config파일 자동 로드 location="classpath:database.properties"  /!-->
+	<context:property-placeholder location="/config/*.properties" />
+    
     <!-- MySQL dataSource -->
     <bean id="dataSource"
         class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
-        <property name="url"
-            value="jdbc:log4jdbc:mysql://15.164.84.243/comzalal?useSSL=false&amp;serverTimezone=UTC"></property>
-        <property name="username" value="dksekfldks65"></property>
-        <property name="password" value="2019ssg!"></property>
+        <property name="driverClassName" value="${spring.datasource.driverClassName}"></property>
+        <property name="url" value="${spring.datasource.url}"></property>
+        <property name="username" value="${spring.datasource.username}"></property>
+        <property name="password" value="${spring.datasource.password}"></property>
     </bean>
  
     <!-- mybatis SqlSessionFactoryBean -->
