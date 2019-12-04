@@ -4,6 +4,8 @@ public class ItemDto extends BaseDto{
 
 	private int itemId;
 	private int price;
+	private String itemNm;
+	private String useYn;
 	private String itemAddInfo;
 	private String itemDetail;
 	private String repImgPath;
@@ -36,6 +38,18 @@ public class ItemDto extends BaseDto{
 	}
 	public void setRepImgPath(String repImgPath) {
 		this.repImgPath = repImgPath;
+	}
+	public String getItemNm() {
+		return itemNm;
+	}
+	public void setItemNm(String itemNm) {
+		this.itemNm = itemNm;
+	}
+	public String getUseYn() {
+		return useYn;
+	}
+	public void setUseYn(String useYn) {
+		this.useYn = useYn;
 	}
 	
 }
