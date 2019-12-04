@@ -18,7 +18,7 @@ public class PostController {
 	@RequestMapping(value = "/enroll", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		
-		logger.info("hello write");
+		logger.info("hello write!");
 		
 		return "write";
 	}
